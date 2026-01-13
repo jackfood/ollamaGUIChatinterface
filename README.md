@@ -105,7 +105,7 @@ You can make this entire setup "Portable" to run it from a USB drive or move it 
 | **Model Files** | `%USERPROFILE%\.ollama` | Contains your downloaded LLMs (the largest folder). |
 | **Ollama Program** | The folder containing `start-ollama.bat` | The Intel/Standard Ollama binaries. |
 | **Python Env** | Your `venv` or Python folder | The library dependencies. |
-| **The App** | The folder containing `main.py` | Contains `settings.json` and `sessions.json`. |
+| **The App** | The folder containing `OllamaChatInterface.py` | Contains `settings.json` and `sessions.json`. |
 
 **Step:** Zip these four components. For the `.ollama` folder, ensure you include the `models` and `blobs` subdirectories.
 
@@ -115,7 +115,7 @@ You can make this entire setup "Portable" to run it from a USB drive or move it 
 2.  **Restore Models:** 
     *   **Option A (Standard):** Copy the extracted `.ollama` folder into the new PC's User directory: `C:\Users\<NewUser>\.ollama`.
     *   **Option B (True Portable):** If you don't want to copy to `C:\`, set a Windows Environment Variable `OLLAMA_MODELS` pointing to your portable models folder.
-3.  **Launch the App:** Run your portable Python executable against the `main.py` script.
+3.  **Launch the App:** Run your portable Python executable against the `OllamaChatInterface.py` script.
 
 ### 3. Re-referencing Paths
 When you run the app on the new PC for the first time:
