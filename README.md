@@ -92,8 +92,8 @@ Standard Python clipboard libraries often strip formatting. This script uses `ct
 
 ### Smart Streaming
 The interface uses a token-counting threshold to switch between plain text and formatted rendering during streaming. This ensures the UI remains responsive and does not "flicker" while the AI is generating long responses.
----
 
+---
 ## 📦 Portability & Backup Guide
 
 You can make this entire setup "Portable" to run it from a USB drive or move it between PCs without re-downloading models or re-installing Python.
