@@ -63,12 +63,12 @@ For users with Intel hardware, using the **IPEX-LLM** version of Ollama provides
 ## 🛠️ Usage Guide
 
 ### Initial Setup
-1.  Run the application:
+1.  Copy the py into your python directory. Run the application:
     ```bash
-    python main.py
+    python OllamaChatInterface.py
     ```
-2.  **Link Ollama:** The app will prompt you to find your Ollama executable. Browse and select either `ollama.exe` (Standard) or `start-ollama.bat` (Intel).
-3.  **Start Server:** Click the **Start Server** button in the sidebar. The status indicator will turn green once ready.
+2.  **Link Ollama:** The app will prompt you to find your Ollama executable. One-time set up. Browse and select either `ollama.exe` (Standard) or `start-ollama.bat` (Intel).
+3.  **Start Server:** Click the **Start Server** button in the sidebar or directly from the pop up box. The status indicator will turn green once ready.
 
 ### Chatting
 *   **New Chat:** Click the `+` button in the sidebar to start a fresh session.
