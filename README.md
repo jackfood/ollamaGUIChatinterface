@@ -92,6 +92,37 @@ Standard Python clipboard libraries often strip formatting. This script uses `ct
 
 ### Smart Streaming
 The interface uses a token-counting threshold to switch between plain text and formatted rendering during streaming. This ensures the UI remains responsive and does not "flicker" while the AI is generating long responses.
+---
+
+## 📦 Portability & Backup Guide
+
+You can make this entire setup "Portable" to run it from a USB drive or move it between PCs without re-downloading models or re-installing Python.
+
+### 1. What to Backup (Source PC)
+
+| Component | Path | Description |
+| :--- | :--- | :--- |
+| **Model Files** | `%USERPROFILE%\.ollama` | Contains your downloaded LLMs (the largest folder). |
+| **Ollama Program** | The folder containing `start-ollama.bat` | The Intel/Standard Ollama binaries. |
+| **Python Env** | Your `venv` or Python folder | The library dependencies. |
+| **The App** | The folder containing `main.py` | Contains `settings.json` and `sessions.json`. |
+
+**Step:** Zip these four components. For the `.ollama` folder, ensure you include the `models` and `blobs` subdirectories.
+
+### 2. Moving to a New PC (Deployment)
+
+1.  **Extract All:** Place the folders anywhere (e.g., `D:\PortableAI\`).
+2.  **Restore Models:** 
+    *   **Option A (Standard):** Copy the extracted `.ollama` folder into the new PC's User directory: `C:\Users\<NewUser>\.ollama`.
+    *   **Option B (True Portable):** If you don't want to copy to `C:\`, set a Windows Environment Variable `OLLAMA_MODELS` pointing to your portable models folder.
+3.  **Launch the App:** Run your portable Python executable against the `main.py` script.
+
+### 3. Re-referencing Paths
+When you run the app on the new PC for the first time:
+1.  The app may state "Ollama Not Found."
+2.  Click **Browse** when prompted.
+3.  Navigate to your extracted Ollama folder and select `start-ollama.bat` (or `ollama.exe`).
+4.  The app will update `settings.json` with the new paths, and all your previous sessions will be visible immediately.
 
 ---
 
